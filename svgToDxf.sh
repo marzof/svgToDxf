@@ -57,8 +57,8 @@ function svgToDxf()
   dxffile=${base}.dxf
 
   svgToEps $1
-  echo "pstoedit -dt -f 'dxf:-polyaslines -mm' ${epsfile} ${dxffile}"
-  pstoedit -dt -f 'dxf:-polyaslines -mm' ${epsfile} ${dxffile} &> /dev/null
+  echo "pstoedit -dt -f 'dxf_s:-polyaslines -mm' ${epsfile} ${dxffile}"
+  pstoedit -dt -f 'dxf_s:-polyaslines -mm' ${epsfile} ${dxffile} &> /dev/null
   rm $epsfile
 }
 
